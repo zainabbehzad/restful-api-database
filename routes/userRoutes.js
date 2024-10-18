@@ -1,4 +1,3 @@
-// routes/userRoutes.js
 const express = require('express');
 const User = require('../models/User'); // Ensure this path is correct
 
@@ -10,7 +9,7 @@ router.get('/', async (req, res) => {
     const users = await User.find({});
     res.json(users);
   } catch (error) {
-    console.error("Error fetching users:", error); // Log the error
+    console.error('Error fetching users:', error); // Log the error
     res.status(500).json({ error: 'Failed to fetch users' });
   }
 });
@@ -23,7 +22,7 @@ router.post('/', async (req, res) => {
     await newUser.save();
     res.status(201).json(newUser);
   } catch (error) {
-    console.error("Error creating user:", error); // Log the error
+    console.error('Error creating user:', error); // Log the error
     res.status(400).json({ error: 'Failed to create user', details: error.message });
   }
 });
@@ -44,7 +43,7 @@ router.put('/:id', async (req, res) => {
       res.status(404).json({ error: 'User not found' });
     }
   } catch (error) {
-    console.error("Error updating user:", error); // Log the error
+    console.error('Error updating user:', error); // Log the error
     res.status(500).json({ error: 'Failed to update user' });
   }
 });
@@ -56,7 +55,7 @@ router.delete('/:id', async (req, res) => {
     await User.findByIdAndDelete(id);
     res.status(204).send();
   } catch (error) {
-    console.error("Error deleting user:", error); // Log the error
+    console.error('Error deleting user:', error); // Log the error
     res.status(500).json({ error: 'Failed to delete user' });
   }
 });
