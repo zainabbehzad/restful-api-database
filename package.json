@@ -1,0 +1,22 @@
+{
+  "name": "restful-api-database",
+  "version": "1.0.0",
+  "description": "A RESTful API Database Integration refers to the process of connecting a web application with a database using a REST (Representational State Transfer) API. This architecture allows for seamless communication between the client and server, enabling data to be created, read, updated, and deleted (CRUD operations) over HTTP protocols.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
